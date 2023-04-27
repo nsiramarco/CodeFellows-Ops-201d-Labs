@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script Name:                  Script Name
-# Author:                       Your Name
-# Date of latest revision:      00/00/0000
-# Purpose:                      Purpose
+# Script Name:                  helloworld bash
+# Author:                       Natasha Siramarco
+# Date of latest revision:      04/27/2023
+# Purpose:                      updated to print the echo
 
 # Declaration of variables
 
@@ -12,6 +12,7 @@
 
 # Main
 
+echo “I am working perfectly!”
 
 
 # End
