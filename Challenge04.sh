@@ -16,8 +16,17 @@ dirs=("dir1" "dir2" "dir3" "dir4")
 # Main
 
 # Put the names of the four directories in an array
-echo "Directory names: ${dirs[@]}"
-
+for dir in "${dirs[@]}"
+do
+  
+    # Create the directory if it doesn't exist
+      mkdir -p "$dir"
+      
 # References the array variable to create a new .txt file in each directory
+
+  touch "$dir/$dir.txt"
+
+
+done
 
 # End
