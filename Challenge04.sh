@@ -24,3 +24,18 @@ for dir in "${directories[@]}"; do
 done
 
 # End
+
+
+#     Explanation: 
+#     This script uses the mkdir command to create the four directories, 
+#     then puts their names in an array called directories. The script 
+#     then loops through the array using a for loop and creates a new 
+#     .txt file in each directory using the touch command. The resulting 
+#     file names will be dir1/dir1.txt, dir2/dir2.txt, dir3/dir3.txt, and
+#     dir4/dir4.txt.
+
+
+
+
+
+
