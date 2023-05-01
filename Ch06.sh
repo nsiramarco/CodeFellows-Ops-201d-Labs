@@ -17,7 +17,7 @@ read -p "Enter the file or directory: " path
 # Main
 # Check if the path exists
 if [ -e "$path" ]; then
-    echo "$path already exists."
+    echo "$path exists already."
 else
     # If the path doesn't exist, create it
     if [ -f "$path" ]; then
