@@ -28,17 +28,10 @@ echo "-------------------"
 echo "Computer Name:"
 sudo lshw -short | grep "system" | awk '{print "  " $2}'
 
-# Print CPU information
+# Print CPU information header
 echo "CPU Information:"
-sudo lshw -short | grep "processor" | awk '{print "  " $2 " " $3 " " $4}'
-
-# Print RAM information
-echo "RAM Information:"
-sudo lshw -short | grep "memory" | awk '{print "  " $2 " " $3}'
-
-# Print storage information
-echo "Storage Information:"
-sudo lshw -short | grep "disk" | awk '{print "  " $2 " " $3 " " $4 " " $5}'
-
+echo "----------------"
+echo "Information:"
+sudo lshw -short | grep -m 1 "processor" | awk '{print "  " $2 "  " $3 "  " $4 "  " $5 "  " $6 "  " $7}'
 
 # End
