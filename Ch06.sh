@@ -16,22 +16,22 @@ read -p "Enter the file or directory: " path
 
 # Main
 # Check if the path exists
-if [ -e "$path" ]; then
-    echo "$path exists already."
-else
-    # If the path doesn't exist, create it
-    if [ -f "$path" ]; then
-        # Create a file
-        touch "$path"
-        echo "$path created successfully."
-    elif [ -d "$path" ]; then
-        # Create a directory
-        mkdir "$path"
-        echo "$path created successfully."
+# Array containing paths to files and directories to check/create
+paths=("/path/to/file" "/path/to/directory")
+
+# Loop through each path in the array
+for path in "${paths[@]}"
+do
+    # Check if the path exists
+    if [ -e "$path" ]
+    then
+        echo "Path already exists: $path"
     else
-        echo "$path is not a valid file or directory path."
+        # If the path does not exist, create it
+        mkdir -p "$path"
+        echo "Created path: $path"
     fi
-fi
+done
 
 
 # End

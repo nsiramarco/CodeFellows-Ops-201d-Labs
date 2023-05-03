@@ -20,18 +20,16 @@
 
 
 # Main
-# Print system information header
-echo "System Information:"
-echo "-------------------"
-
 # Print computer name
 echo "Computer Name:"
-sudo lshw -short | grep "system" | awk '{print "  " $2}'
+sudo lshw -class system | head -n 1
+echo "---------------"
 
 # Print CPU information header
 echo "CPU Information:"
-echo "----------------"
-echo "Information:"
-sudo lshw -short | grep -m 1 "processor" | awk '{print "  " $2 "  " $3 "  " $4 "  " $5 "  " $6 "  " $7}'
+sudo lshw | grep -A6 *-cpu
+sudo lshw | grep -A4 *-memory # need to fix
+sudo lshw | grep 
+
 
 # End
