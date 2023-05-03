@@ -15,9 +15,11 @@ read -p "Enter the file or directory: " path
 
 
 # Main
-# Check if the path exists
-# Array containing paths to files and directories to check/create
-paths=("/path/to/file" "/path/to/directory")
+# Name of the file or directory to be created
+name read -p "Enter the name of the file or directory to be created: "
+
+# Array with the possible paths to the file or directory
+paths=("/home/ns/CodeFellows-Ops-201d-Labs/CodeFellows-Ops-201d-Labs-2/$name")
 
 # Loop through each path in the array
 for path in "${paths[@]}"

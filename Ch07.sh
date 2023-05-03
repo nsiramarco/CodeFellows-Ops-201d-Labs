@@ -25,11 +25,18 @@ echo "Computer Name:"
 sudo lshw -class system | head -n 1
 echo "---------------"
 
-# Print CPU information header
+# Print information
 echo "CPU Information:"
 sudo lshw | grep -A6 *-cpu
-sudo lshw | grep -A4 *-memory # need to fix
-sudo lshw | grep 
+
+echo "RAM Information:"
+sudo lshw | grep -A4 '*-memory' | grep -v 'slot'
+
+echo "Adapter Information:"
+sudo lshw | grep -A11 *-display | grep -v 'version' 
+
+echo "Network Adapter Information:"
+sudo lshw | grep -A15 *-network
 
 
 # End
